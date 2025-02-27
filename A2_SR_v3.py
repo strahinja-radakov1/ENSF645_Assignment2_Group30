@@ -17,7 +17,7 @@ import torchvision.utils as vutils
 # Device setup
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-# --- 1️⃣ Data Preprocessing ---
+# Data Preprocessing
 
 # Image transformations
 image_transform = transforms.Compose([
@@ -86,7 +86,7 @@ class MultimodalDataset(Dataset):
             'label': torch.tensor(label, dtype=torch.long)
         }
 
-# --- 2️⃣ Model Definition ---
+# Model Definition 
 
 # Image feature extractor (ResNet50)
 class ImageFeatureExtractor(nn.Module):
@@ -135,7 +135,7 @@ class MultimodalClassifier(nn.Module):
         output = self.classifier(combined_features)  # Final classification
         return output
 
-# --- 3️⃣ Training & Evaluation ---
+# 3️⃣ Training & Evaluation
 
 # Paths to dataset
 TRAIN_PATH = "/work/TALC/enel645_2025w/garbage_data/CVPR_2024_dataset_Train"
@@ -155,7 +155,7 @@ test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
 # Define model
 image_feature_dim = 2048 
-text_feature_dim = 768  # DistilBERT CLS token size
+text_feature_dim = 768  
 num_classes = len(train_dataset.classes)
 
 model = MultimodalClassifier(image_feature_dim, text_feature_dim, num_classes).to(device)
@@ -316,6 +316,6 @@ plt.axis("off")
 plt.savefig("convolutional_filters.png")
 plt.show()
 
-print(f"🔹 Image Model (ResNet18) Parameters: {image_params:,}")
-print(f"🔹 Text Model (DistilBERT) Parameters: {text_params:,}")
-print(f"🔹 Total Trainable Parameters: {total_params:,}")
+print(f"Image Model (ResNet18) Parameters: {image_params:,}")
+print(f"Text Model (DistilBERT) Parameters: {text_params:,}")
+print(f"Total Trainable Parameters: {total_params:,}")
