@@ -1,0 +1,284 @@
+Downloading: "https://download.pytorch.org/models/resnet50-0676ba61.pth" to /home/strahinja.radakov1/.cache/torch/hub/checkpoints/resnet50-0676ba61.pth
+  0%|          | 0.00/97.8M [00:00<?, ?B/s] 11%|█         | 11.0M/97.8M [00:00<00:00, 114MB/s] 23%|██▎       | 22.2M/97.8M [00:00<00:00, 116MB/s] 34%|███▍      | 33.4M/97.8M [00:00<00:00, 114MB/s] 45%|████▌     | 44.4M/97.8M [00:00<00:00, 114MB/s] 57%|█████▋    | 55.6M/97.8M [00:00<00:00, 115MB/s] 68%|██████▊   | 66.9M/97.8M [00:00<00:00, 116MB/s] 80%|███████▉  | 78.1M/97.8M [00:00<00:00, 116MB/s] 91%|█████████▏| 89.4M/97.8M [00:00<00:00, 116MB/s]100%|██████████| 97.8M/97.8M [00:00<00:00, 116MB/s]
+/home/strahinja.radakov1/assignment2/v3/final/A2_SR_v3.py:243: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load('multimodal_model.pth'))  # Load best model
+/home/strahinja.radakov1/assignment2/v3/final/A2_SR_v3.py:293: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(7, 5))
+Epoch [1/10], Train Loss: 0.4898, Val Loss: 0.2942, Train Acc: 81.84%, Val Acc: 89.89%
+Epoch [2/10], Train Loss: 0.2211, Val Loss: 0.3102, Train Acc: 92.37%, Val Acc: 89.39%
+Epoch [3/10], Train Loss: 0.1081, Val Loss: 0.3342, Train Acc: 96.40%, Val Acc: 89.67%
+Epoch [4/10], Train Loss: 0.0469, Val Loss: 0.3917, Train Acc: 98.67%, Val Acc: 89.50%
+Epoch [5/10], Train Loss: 0.0245, Val Loss: 0.4075, Train Acc: 99.32%, Val Acc: 90.39%
+Epoch [6/10], Train Loss: 0.0159, Val Loss: 0.4867, Train Acc: 99.60%, Val Acc: 89.17%
+Epoch [7/10], Train Loss: 0.0141, Val Loss: 0.4723, Train Acc: 99.60%, Val Acc: 89.28%
+Epoch [8/10], Train Loss: 0.0220, Val Loss: 0.6345, Train Acc: 99.26%, Val Acc: 88.83%
+Epoch [9/10], Train Loss: 0.0280, Val Loss: 0.4908, Train Acc: 99.05%, Val Acc: 89.50%
+Epoch [10/10], Train Loss: 0.0207, Val Loss: 0.5048, Train Acc: 99.23%, Val Acc: 89.89%
+Training Complete!
+Test Accuracy: 85.66%
+Layer: image_model.feature_extractor.0.weight | Size: torch.Size([64, 3, 7, 7]) | Requires Grad: True
+Layer: image_model.feature_extractor.1.weight | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.1.bias | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.0.conv1.weight | Size: torch.Size([64, 64, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.0.bn1.weight | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.0.bn1.bias | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.0.conv2.weight | Size: torch.Size([64, 64, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.0.bn2.weight | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.0.bn2.bias | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.0.conv3.weight | Size: torch.Size([256, 64, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.0.bn3.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.0.bn3.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.0.downsample.0.weight | Size: torch.Size([256, 64, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.0.downsample.1.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.0.downsample.1.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.1.conv1.weight | Size: torch.Size([64, 256, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.1.bn1.weight | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.1.bn1.bias | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.1.conv2.weight | Size: torch.Size([64, 64, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.1.bn2.weight | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.1.bn2.bias | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.1.conv3.weight | Size: torch.Size([256, 64, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.1.bn3.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.1.bn3.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.2.conv1.weight | Size: torch.Size([64, 256, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.2.bn1.weight | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.2.bn1.bias | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.2.conv2.weight | Size: torch.Size([64, 64, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.2.bn2.weight | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.2.bn2.bias | Size: torch.Size([64]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.2.conv3.weight | Size: torch.Size([256, 64, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.2.bn3.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.4.2.bn3.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.0.conv1.weight | Size: torch.Size([128, 256, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.0.bn1.weight | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.0.bn1.bias | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.0.conv2.weight | Size: torch.Size([128, 128, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.0.bn2.weight | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.0.bn2.bias | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.0.conv3.weight | Size: torch.Size([512, 128, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.0.bn3.weight | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.0.bn3.bias | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.0.downsample.0.weight | Size: torch.Size([512, 256, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.0.downsample.1.weight | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.0.downsample.1.bias | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.1.conv1.weight | Size: torch.Size([128, 512, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.1.bn1.weight | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.1.bn1.bias | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.1.conv2.weight | Size: torch.Size([128, 128, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.1.bn2.weight | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.1.bn2.bias | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.1.conv3.weight | Size: torch.Size([512, 128, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.1.bn3.weight | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.1.bn3.bias | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.2.conv1.weight | Size: torch.Size([128, 512, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.2.bn1.weight | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.2.bn1.bias | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.2.conv2.weight | Size: torch.Size([128, 128, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.2.bn2.weight | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.2.bn2.bias | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.2.conv3.weight | Size: torch.Size([512, 128, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.2.bn3.weight | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.2.bn3.bias | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.3.conv1.weight | Size: torch.Size([128, 512, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.3.bn1.weight | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.3.bn1.bias | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.3.conv2.weight | Size: torch.Size([128, 128, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.3.bn2.weight | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.3.bn2.bias | Size: torch.Size([128]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.3.conv3.weight | Size: torch.Size([512, 128, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.3.bn3.weight | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.5.3.bn3.bias | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.0.conv1.weight | Size: torch.Size([256, 512, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.0.bn1.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.0.bn1.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.0.conv2.weight | Size: torch.Size([256, 256, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.0.bn2.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.0.bn2.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.0.conv3.weight | Size: torch.Size([1024, 256, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.0.bn3.weight | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.0.bn3.bias | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.0.downsample.0.weight | Size: torch.Size([1024, 512, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.0.downsample.1.weight | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.0.downsample.1.bias | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.1.conv1.weight | Size: torch.Size([256, 1024, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.1.bn1.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.1.bn1.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.1.conv2.weight | Size: torch.Size([256, 256, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.1.bn2.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.1.bn2.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.1.conv3.weight | Size: torch.Size([1024, 256, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.1.bn3.weight | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.1.bn3.bias | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.2.conv1.weight | Size: torch.Size([256, 1024, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.2.bn1.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.2.bn1.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.2.conv2.weight | Size: torch.Size([256, 256, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.2.bn2.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.2.bn2.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.2.conv3.weight | Size: torch.Size([1024, 256, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.2.bn3.weight | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.2.bn3.bias | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.3.conv1.weight | Size: torch.Size([256, 1024, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.3.bn1.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.3.bn1.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.3.conv2.weight | Size: torch.Size([256, 256, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.3.bn2.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.3.bn2.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.3.conv3.weight | Size: torch.Size([1024, 256, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.3.bn3.weight | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.3.bn3.bias | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.4.conv1.weight | Size: torch.Size([256, 1024, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.4.bn1.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.4.bn1.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.4.conv2.weight | Size: torch.Size([256, 256, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.4.bn2.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.4.bn2.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.4.conv3.weight | Size: torch.Size([1024, 256, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.4.bn3.weight | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.4.bn3.bias | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.5.conv1.weight | Size: torch.Size([256, 1024, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.5.bn1.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.5.bn1.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.5.conv2.weight | Size: torch.Size([256, 256, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.5.bn2.weight | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.5.bn2.bias | Size: torch.Size([256]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.5.conv3.weight | Size: torch.Size([1024, 256, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.5.bn3.weight | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.6.5.bn3.bias | Size: torch.Size([1024]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.0.conv1.weight | Size: torch.Size([512, 1024, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.0.bn1.weight | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.0.bn1.bias | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.0.conv2.weight | Size: torch.Size([512, 512, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.0.bn2.weight | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.0.bn2.bias | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.0.conv3.weight | Size: torch.Size([2048, 512, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.0.bn3.weight | Size: torch.Size([2048]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.0.bn3.bias | Size: torch.Size([2048]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.0.downsample.0.weight | Size: torch.Size([2048, 1024, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.0.downsample.1.weight | Size: torch.Size([2048]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.0.downsample.1.bias | Size: torch.Size([2048]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.1.conv1.weight | Size: torch.Size([512, 2048, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.1.bn1.weight | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.1.bn1.bias | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.1.conv2.weight | Size: torch.Size([512, 512, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.1.bn2.weight | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.1.bn2.bias | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.1.conv3.weight | Size: torch.Size([2048, 512, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.1.bn3.weight | Size: torch.Size([2048]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.1.bn3.bias | Size: torch.Size([2048]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.2.conv1.weight | Size: torch.Size([512, 2048, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.2.bn1.weight | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.2.bn1.bias | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.2.conv2.weight | Size: torch.Size([512, 512, 3, 3]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.2.bn2.weight | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.2.bn2.bias | Size: torch.Size([512]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.2.conv3.weight | Size: torch.Size([2048, 512, 1, 1]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.2.bn3.weight | Size: torch.Size([2048]) | Requires Grad: True
+Layer: image_model.feature_extractor.7.2.bn3.bias | Size: torch.Size([2048]) | Requires Grad: True
+Layer: text_model.bert.embeddings.word_embeddings.weight | Size: torch.Size([30522, 768]) | Requires Grad: True
+Layer: text_model.bert.embeddings.position_embeddings.weight | Size: torch.Size([512, 768]) | Requires Grad: True
+Layer: text_model.bert.embeddings.LayerNorm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.embeddings.LayerNorm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.attention.q_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.attention.q_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.attention.k_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.attention.k_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.attention.v_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.attention.v_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.attention.out_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.attention.out_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.sa_layer_norm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.sa_layer_norm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.ffn.lin1.weight | Size: torch.Size([3072, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.ffn.lin1.bias | Size: torch.Size([3072]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.ffn.lin2.weight | Size: torch.Size([768, 3072]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.ffn.lin2.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.output_layer_norm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.0.output_layer_norm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.attention.q_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.attention.q_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.attention.k_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.attention.k_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.attention.v_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.attention.v_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.attention.out_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.attention.out_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.sa_layer_norm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.sa_layer_norm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.ffn.lin1.weight | Size: torch.Size([3072, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.ffn.lin1.bias | Size: torch.Size([3072]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.ffn.lin2.weight | Size: torch.Size([768, 3072]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.ffn.lin2.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.output_layer_norm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.1.output_layer_norm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.attention.q_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.attention.q_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.attention.k_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.attention.k_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.attention.v_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.attention.v_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.attention.out_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.attention.out_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.sa_layer_norm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.sa_layer_norm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.ffn.lin1.weight | Size: torch.Size([3072, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.ffn.lin1.bias | Size: torch.Size([3072]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.ffn.lin2.weight | Size: torch.Size([768, 3072]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.ffn.lin2.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.output_layer_norm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.2.output_layer_norm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.attention.q_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.attention.q_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.attention.k_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.attention.k_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.attention.v_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.attention.v_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.attention.out_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.attention.out_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.sa_layer_norm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.sa_layer_norm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.ffn.lin1.weight | Size: torch.Size([3072, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.ffn.lin1.bias | Size: torch.Size([3072]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.ffn.lin2.weight | Size: torch.Size([768, 3072]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.ffn.lin2.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.output_layer_norm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.3.output_layer_norm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.attention.q_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.attention.q_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.attention.k_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.attention.k_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.attention.v_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.attention.v_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.attention.out_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.attention.out_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.sa_layer_norm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.sa_layer_norm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.ffn.lin1.weight | Size: torch.Size([3072, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.ffn.lin1.bias | Size: torch.Size([3072]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.ffn.lin2.weight | Size: torch.Size([768, 3072]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.ffn.lin2.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.output_layer_norm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.4.output_layer_norm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.attention.q_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.attention.q_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.attention.k_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.attention.k_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.attention.v_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.attention.v_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.attention.out_lin.weight | Size: torch.Size([768, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.attention.out_lin.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.sa_layer_norm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.sa_layer_norm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.ffn.lin1.weight | Size: torch.Size([3072, 768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.ffn.lin1.bias | Size: torch.Size([3072]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.ffn.lin2.weight | Size: torch.Size([768, 3072]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.ffn.lin2.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.output_layer_norm.weight | Size: torch.Size([768]) | Requires Grad: True
+Layer: text_model.bert.transformer.layer.5.output_layer_norm.bias | Size: torch.Size([768]) | Requires Grad: True
+Layer: classifier.0.weight | Size: torch.Size([512, 2816]) | Requires Grad: True
+Layer: classifier.0.bias | Size: torch.Size([512]) | Requires Grad: True
+Layer: classifier.3.weight | Size: torch.Size([4, 512]) | Requires Grad: True
+Layer: classifier.3.bias | Size: torch.Size([4]) | Requires Grad: True
+🔹 Image Model (ResNet18) Parameters: 23,508,032
+🔹 Text Model (DistilBERT) Parameters: 66,362,880
+🔹 Total Trainable Parameters: 91,315,268
